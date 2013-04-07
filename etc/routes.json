@@ -1,0 +1,5 @@
+{
+	"test": "\\Test\\Test",
+	"tasks": "\\Tasks\\TaskList",
+	"tasks/:task_id": "\\Tasks\\Task"
+}

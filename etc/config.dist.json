@@ -1,0 +1,9 @@
+{
+	"database": {
+		"driver": "sqlite",
+		"host": "",
+		"database": "tasks.db",
+		"user": "",
+		"password": ""
+	}
+}
