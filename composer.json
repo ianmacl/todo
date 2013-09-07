@@ -13,7 +13,8 @@
     "require": {
         "php": ">=5.3.2",
         "joomla/application": "dev-master",
-        "joomla/router": "dev-master"
+        "joomla/router": "dev-master",
+        "joomla/database": "dev-master"
     },
     "autoload": {
 		"psr-0": {

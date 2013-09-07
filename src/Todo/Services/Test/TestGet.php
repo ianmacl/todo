@@ -2,9 +2,9 @@
 
 namespace Todo\Services\Test;
 
-use Joomla\Controller\Base;
+use Joomla\Controller\AbstractController;
 
-class TestGet extends Base
+class TestGet extends AbstractController
 {
 	public function execute()
 	{
