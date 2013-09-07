@@ -2,10 +2,10 @@
 
 namespace Todo\Services\Tasks;
 
-use Joomla\Controller\Base;
+use Joomla\Controller\AbstractController;
 use stdClass;
 
-class TaskListCreate extends \Joomla\Controller\Base
+class TaskListCreate extends AbstractController
 {
 	public function execute()
 	{

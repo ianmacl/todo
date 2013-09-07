@@ -2,11 +2,11 @@
 
 namespace Todo\Services\Tasks;
 
-use Joomla\Controller\Base;
+use Joomla\Controller\AbstractController;
 use InvalidArgumentException;
 use stdClass;
 
-class TaskUpdate extends Base
+class TaskUpdate extends AbstractController
 {
 	public function execute()
 	{

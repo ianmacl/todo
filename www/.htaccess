@@ -17,8 +17,8 @@ RewriteRule .* http://%{HTTP_HOST}/%1 [R=301,L]
 ###########################################
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^/todo/api/
-RewriteRule (.*) /todo/api/index.php [L]
+RewriteCond %{REQUEST_URI} ^/todo/www/api/
+RewriteRule (.*) /todo/www/api/index.php [L]
 
 ###########################################
 RewriteCond %{REQUEST_FILENAME} !-f

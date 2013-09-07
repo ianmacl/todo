@@ -2,11 +2,11 @@
 
 namespace Todo\Services\Tasks;
 
-use Joomla\Controller\Base;
+use Joomla\Controller\AbstractController;
 use RuntimeException;
 use InvalidArgumentException;
 
-class TaskDelete extends Base
+class TaskDelete extends AbstractController
 {
 	public function execute()
 	{

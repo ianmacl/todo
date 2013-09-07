@@ -2,9 +2,9 @@
 
 namespace Todo\Services\Tasks;
 
-use Joomla\Controller\Base;
+use Joomla\Controller\AbstractController;
 
-class TaskListGet extends Base
+class TaskListGet extends AbstractController
 {
 	public function execute()
 	{

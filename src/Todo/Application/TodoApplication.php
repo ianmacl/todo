@@ -2,14 +2,14 @@
 
 namespace Todo\Application;
 
-use Joomla\Application\Web;
+use Joomla\Application\AbstractWebApplication;
 use Joomla\Router\Router;
-use Joomla\Router\Rest;
+use Joomla\Router\RestRouter;
 use Joomla\Input\Input;
 use Joomla\Registry\Registry;
-use Joomla\Database\Driver;
+use Joomla\Database\DatabaseDriver;
 
-class TodoApplication extends Web
+class TodoApplication extends AbstractWebApplication
 {
 	/**
 	 * @var    Joomla\Database\Driver  A database object for the application to use.
@@ -53,7 +53,7 @@ class TodoApplication extends Web
 	 */
 	public function loadRouter(Router $router = null)
 	{
-		$this->router = ($router === null) ? new Rest($this->input) : $router;
+		$this->router = ($router === null) ? new RestRouter($this->input) : $router;
 
 		return $this;
 	}
@@ -65,7 +65,7 @@ class TodoApplication extends Web
 	 *
 	 * @return  Todo\Application\WebApplication  This method is chainable.
 	 */
-	public function loadDatabase(Driver $driver = null)
+	public function loadDatabase(DatabaseDriver $driver = null)
 	{
 		if ($driver === null)
 		{
@@ -76,7 +76,7 @@ class TodoApplication extends Web
 				$config->database = JPATH_CONFIGURATION . '/' . $config->database;
 			}
 
-			$this->db = Driver::getInstance((array)$config);
+			$this->db = DatabaseDriver::getInstance((array)$config);
 
 			// Set the debug flag.
 			$this->db->setDebug($this->get('debug', false));
